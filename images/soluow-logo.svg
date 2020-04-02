@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="250" viewBox="0 0 750 250">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 25px;
+      }
+
+      .cls-1, .cls-5 {
+        fill: #01a3ee;
+      }
+
+      .cls-1, .cls-2 {
+        font-family: "微软雅黑";
+      }
+
+      .cls-2 {
+        font-size: 58.333px;
+        fill: #ccc;
+      }
+
+      .cls-3 {
+        fill: #0078b6;
+      }
+
+      .cls-4 {
+        fill: #d81e06;
+      }
+    </style>
+  </defs>
+  <text id="soluow" class="cls-1" transform="translate(195.674 128.779) scale(4.167)">搜罗辅助网</text>
+  <text id="www.soluow.com" class="cls-2" x="218.828" y="208.281">www<tspan class="cls-3">.<tspan class="cls-4">soluow</tspan>.</tspan>com</text>
+  <circle id="椭圆_1" data-name="椭圆 1" class="cls-5" cx="88" cy="148" r="50"/>
+  <circle id="椭圆_1_拷贝" data-name="椭圆 1 拷贝" class="cls-5" cx="120.719" cy="109" r="50"/>
+</svg>
