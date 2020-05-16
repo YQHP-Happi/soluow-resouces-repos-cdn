@@ -1,1 +1,130 @@
-$(function(){var g="https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load-error.svg";var i="https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load.svg";var e=0;var d=0;var b=$("header .menu-list,header nav");var f=$("#searchText");var j=$("#search");var c=$("#phoneSearchText");$("header .menu-btn").on("click",function(n){n.stopPropagation();b.slideToggle("fast")});$(window).on("resize",function(){b.hide()}).on("click",function(){b.hide()}).on("touchstart",function(n){e=n.originalEvent.changedTouches[0].pageX;d=n.originalEvent.changedTouches[0].pageY}).on("touchmove",function(q){var o=q.originalEvent.changedTouches[0].pageX;var n=q.originalEvent.changedTouches[0].pageY;var p=h(e,d,o,n);if(p===1){b.hide()}});b.on("click",function(n){n.stopPropagation()}).on("touchmove",function(n){n.stopPropagation()});j.on("click",function(){m(f.val().trim())});f.on("keyup",function(n){if(n.keyCode===13){m(f.val().trim())}});c.on("keyup",function(n){if(n.keyCode===13){m($(this).val().trim())}});function m(n){(n&&n.trim().length!==0)&&(location.href="/search/"+n)}function h(q,o,s,r){var p=o-r;var n=0;if(p>0){n=1}else{if(p<0){n=2}else{n=0}}return n}function l(o){var n=new Image();var p=parseInt(o.data("retry-count"))||0;o.attr("src",i);n.onload=function(q){o.replaceWith(n)};n.onerror=function(){if(p<3){l(o)}else{o.attr("src",g);console.log("图片加载失败:"+o.data("src"))}};o.data("retry-count",p+1);n.src=o.data("src")}var k=$(".content .data .lock input").select().focus();$(".content .data ").find("img").on("click",function(){l($(this).data("retry-count",0))}).each(function(){l($(this))}).end().find(".lock .error").fadeOut(5000).end().find(".lock button").on("click",function(){$(this).prop("disabled",true);a()});k.on("keyup",function(n){if(n.keyCode===13){a()}});function a(){location.href=location.protocol+"//"+location.host+location.pathname+"?pw="+k.val()}});
+$(function () {
+    var imgLoadError = "https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load-error.svg";
+    var imgLoad = "https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load.svg";
+    var startX = 0;
+    var startY = 0;
+    var $menuList = $("header .menu-list,header nav");
+    var $searchText = $("#searchText");
+    var $search = $("#search");
+    var $phoneSearchText = $("#phoneSearchText");
+
+    $("header .menu-btn").on("click", function (e) {
+        e.stopPropagation();
+        $menuList.slideToggle('fast');
+    });
+
+    $(window).on("resize", function () {
+        $menuList.hide();
+    }).on("click", function () {
+        $menuList.hide();
+    }).on('touchstart', function (e) {
+        startX = e.originalEvent.changedTouches[0].pageX;
+        startY = e.originalEvent.changedTouches[0].pageY;
+    }).on('touchmove', function (e) {
+        var endX = e.originalEvent.changedTouches[0].pageX;
+        var endY = e.originalEvent.changedTouches[0].pageY;
+        var direction = getSlideDirection(startX, startY, endX, endY);
+        if (direction === 1) {
+            $menuList.hide();
+        }
+    });
+
+    $menuList.on("click", function (e) {
+        e.stopPropagation();
+    }).on("touchmove", function (e) {
+        e.stopPropagation();
+    });
+
+    $search.on('click', function () {
+        var text = $searchText.val().trim();
+        if (text.length === 0) {
+            $searchText.focus();
+            return;
+        }
+        search(text);
+    });
+
+    $searchText.on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            search($searchText.val().trim());
+        }
+    });
+
+    $phoneSearchText.on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            search($(this).val().trim());
+        }
+    });
+
+
+    function search(text) {
+        (text && text.trim().length !== 0) && (location.href = '/search/' + text);
+    }
+
+    function getSlideDirection(startX, startY, endX, endY) {
+        var dy = startY - endY;
+        var result = 0;
+        if (dy > 0) {
+            //向上滑动
+            result = 1;
+        } else if (dy < 0) {
+            //向下滑动
+            result = 2;
+        } else {
+            result = 0;
+        }
+        return result;
+    }
+
+
+    /**
+     * 懒加载图片
+     */
+    function lazyLoadImg($img) {
+        if ($img.data('src').trim() === '') {
+            return;
+        }
+        var img = new Image();
+        var retryCount = parseInt($img.data('retry-count')) || 0;
+        $img.attr('src', imgLoad);
+
+        img.onload = function (res) {
+            $img.replaceWith(img);
+        };
+
+        img.onerror = function () {
+            if (retryCount < 3) {
+                lazyLoadImg($img);
+            } else {
+                $img.attr('src', imgLoadError);
+                console.log('图片加载失败:' + $img.data('src'))
+            }
+        };
+
+        $img.data('retry-count', retryCount + 1);
+        img.src = $img.data('src');
+    }
+
+    var $itemPwd = $(".content .data .lock input").select().focus();
+
+    $(".content .data ").find('img').on("click", function () {
+        lazyLoadImg($(this).data('retry-count', 0));
+    }).each(function () {
+        lazyLoadImg($(this));
+    }).end().find('.lock .error').fadeOut(5000).end()
+        .find('.lock button').on('click', function () {
+        $(this).prop('disabled', true);
+        gotoItemWithPwd();
+    });
+
+    $itemPwd.on('keyup', function (event) {
+        if (event.keyCode === 13) {
+            gotoItemWithPwd();
+        }
+    });
+
+    function gotoItemWithPwd() {
+        location.href = location.protocol + '//' + location.host + location.pathname + '?pw=' + $itemPwd.val();
+    }
+
+});
