@@ -1,1 +1,602 @@
-*{padding:0;margin:0;box-sizing:border-box}body,html{height:100%;font:12px/1.3 Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif}ul{list-style:none}.s-button{width:100px;border-radius:2px;outline:none;border:none;color:white;cursor:pointer;background-color:#f85d00;font-size:16px;line-height:100%}.s-button:hover{background-color:#cc560e}a{color:black;outline:none;text-decoration:none}::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb,::-webkit-scrollbar-track{border-radius:999px;border:0 solid transparent}::-webkit-scrollbar-track{box-shadow:1px 1px 5px rgba(100,100,100,0.2) inset}::-webkit-scrollbar-thumb{min-height:0;background-clip:content-box;box-shadow:0 0 0 5px rgba(100,100,100,0.5) inset}::-webkit-scrollbar-corner{background:0 0}header{height:40px;background-color:#fff;border-bottom:solid .5px #dedede}header .menu-list{display:none}header .head{width:1200px;margin:0 auto;position:relative;height:100%}header .head .right{float:right;height:100%;line-height:40px;font-size:14px;color:#333}header .head .right .item{float:left;padding:0 5px}header .head .right a:hover{color:#eb7350}header .head .menu-btn{line-height:40px;float:right;height:100%;display:none;cursor:pointer;user-select:none}header .head .menu-btn span{border:.5px #dedede solid;padding:3px 5px;border-radius:2px}header .head .logo{height:100%;float:left;width:108px}header .head .logo a{height:100%;display:block;background:url("https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/soluow-logo.png") left center no-repeat;background-size:108px 36px}.content-box{background-color:#f7f7f7;padding-top:30px}.content-box .search{width:1200px;margin:0 auto 30px auto;height:36px;line-height:36px}.content-box .search>*{float:left;height:100%}.content-box .search p{font-weight:bold;margin-left:30px;font-size:16px}.content-box .search input{width:827.5862069px;margin:0 30px;font-size:14px;outline:none;border-radius:0;padding-left:10px;border-width:.5px}.content-box .search input.error{border-color:red}.content-box .content{width:1200px;border:1px solid #dedede;border-bottom:none;margin:0 auto;overflow:hidden;background:#f2f2f5}.content-box .content .menu-list{padding:20px 0;float:left;font-size:12px;width:180px}.content-box .content .menu-list .types .item a{display:block;height:35px;line-height:35px;padding-left:30px}.content-box .content .menu-list .types .item.active,.content-box .content .menu-list .types .item:hover{background-color:#fff;font-weight:bold}.content-box .content .data{float:left;min-height:100vh;background-color:#fff;border-bottom:.5px solid #dedede;padding:20px 20px 0 20px;width:calc(100% -  180px)}.content-box .content .data:nth-last-of-type(1){border-bottom:none}.content-box .content .data:not(:nth-of-type(1)){display:none}.content-box .content .data .tip{display:none}.content-box .content .data table{table-layout:fixed;border-collapse:collapse;border-spacing:0;width:100%}.content-box .content .data table tr{height:38px;line-height:38px}.content-box .content .data table tr th{color:#999 !important;border-bottom:solid .5px #f2f2f5;font-size:12px}.content-box .content .data table tr th.title{text-align:left}.content-box .content .data table tr td{border-bottom:1px #f2f2f5 solid;font-size:13px}.content-box .content .data table tr .order{text-align:center;color:#999;width:40px}.content-box .content .data table tr .order.fb{color:#f85d00}.content-box .content .data table tr .title p{width:95%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;height:100%}.content-box .content .data table tr .title p a{color:#0078b6}.content-box .content .data table tr .title.fb p a{font-weight:bold}.content-box .content .data table tr .empty{text-align:center;color:#999;border:none}.content-box .content .data table tr .tag{width:120px;color:#999}.content-box .content .data table tr .tag p{width:55px;text-align:center}.content-box .content .data table tr .tag p span{font-size:12px;color:#fff;background-color:#ff3852;border-radius:2px;display:inline-block;width:16px;height:16px;line-height:17px;text-align:center}.content-box .content .data table tbody tr:hover:not(.not-hover){background-color:#f2f2f5}.content-box .content .data .pagination{text-align:center;margin:10px 0}.content-box .content .data .pagination .prev,.content-box .content .data .pagination .next{display:inline-block;height:30px;line-height:30px;padding:0 10px;margin:0 5px;cursor:pointer;border:.5px solid #dedede;border-radius:3px;font-size:14px}.content-box .content .data .pagination .prev:hover,.content-box .content .data .pagination .next:hover{background:#fbfbfb}.content-box .content .data .pagination .prev.disabled,.content-box .content .data .pagination .next.disabled{background-color:#f2f2f2;cursor:no-drop}.content-box .content.error{height:77vh;text-align:center;padding-top:60px}.content-box .content.error h1{font-size:70px;color:#ccc;user-select:none}.content-box .content.error h2{color:#666;margin-top:20px}.content-box .content.error p{margin-top:10px;font-size:14px}.content-box .content.error p a{text-decoration:underline}.content-box .content.error .err{display:none}footer{border-top:.5px #dedede solid;background-color:#fff;font-size:12px}footer .bottom{width:1200px;margin:0 auto}footer .bottom .friend{border-bottom:.5px #dedede solid;padding:10px 0;overflow:hidden}footer .bottom .friend li{float:left;padding-right:10px}footer .bottom .friend li a{color:#666}footer .bottom .copyright{padding:10px 0;color:#666}footer .bottom .soluow-logo{display:none}@media screen and (min-width:600px) and (max-width:1200px){header .head{width:90%}.content-box .search{width:90%}.content-box .search input{width:calc(90%  - 64px - 100px - 60px)}.content-box .content{width:90%}.content-box .content .menu-list{width:140px}.content-box .content .data{width:calc(100% - 140px)}.content-box .content .data table tr .tag{width:55px}footer .bottom{width:90%}}@media screen and (max-width:600px){a{-webkit-user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}header .head{width:100%;padding:0 10px}header .head .menu-btn{display:block}header .head .right{display:none}header .menu-list{border-bottom:.5px solid #dedede;position:absolute;z-index:2;top:40px;width:100%;text-align:center;padding-top:0;background:#f2f2f5}header .menu-list .types .item{height:35px;line-height:37px;font-size:12px}header .menu-list .types .item .search-input{width:70%;margin-left:10px;height:30px;outline:none;border-radius:0;padding-left:10px;line-height:30px;-webkit-appearance:none;appearance:none;border-color:#dedede;margin-bottom:5px;border-width:.5px}header .menu-list .types .item a{padding-left:0;display:block}header .menu-list .types .item.active:not(:nth-last-of-type(1)),header .menu-list .types .item:hover:not(:nth-last-of-type(1)){background-color:#fff;font-weight:bold}header .menu-list .types .item.last{margin-bottom:5px}.content-box{padding-top:0}.content-box .search{display:none}.content-box .content{width:100%;border:none;background-color:#f7f7f7}.content-box .content .menu-list{display:none}.content-box .content .data{width:100%;display:block !important;padding:0;min-height:0}.content-box .content .data .tip{background-color:#f7f7f7;border-bottom:.5px solid #dedede;display:block;font-size:14px;color:#999;line-height:35px;padding:0 10px;overflow:hidden}.content-box .content .data .tip span,.content-box .content .data .tip a{color:#ff3852}.content-box .content .data table thead{display:none}.content-box .content .data table tbody tr td{border-bottom:none;position:relative}.content-box .content .data table tbody tr td:after{content:'';position:absolute;width:200%;bottom:0;left:0;transform-origin:0 0;transform:scale(.5, .5);box-sizing:border-box;z-index:1;border-bottom:1px solid #f2f2f5}.content-box .content .data table tbody tr .tag{width:55px;text-align:center}.content-box .content .data table tbody tr .order{font-style:italic}.content-box .content .data table tbody tr .title p a{line-height:47px;display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#000;font-size:14px}.content-box .content .data table tbody tr .title p a:active{color:#636363}.content-box .content .data table tbody tr:hover{background-color:white !important}footer .bottom{width:100%}footer .bottom .friend{padding-left:10px}footer .bottom .copyright{display:none}footer .bottom .soluow-logo{display:block;text-align:center}footer .bottom .soluow-logo a{height:220px;display:block;background:url("https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/soluow-logo.png") top 30px center no-repeat;background-size:170px 56.666px}}@media (-webkit-min-device-pixel-ratio:1.5),(min-device-aspect-ratio:1.5){.border-1px::after{transform:scaleY(.7)}}@media (-webkit-min-device-pixel-ratio:2),(min-device-aspect-ratio:2){.border-1px::after{transform:scaleY(.5)}}@media (-webkit-min-device-pixel-ratio:2.5),(min-device-aspect-ratio:2.5){.border-1px::after{transform:scaleY(.4)}}@media (-webkit-min-device-pixel-ratio:3),(min-device-aspect-ratio:3){.border-1px::after{transform:scaleY(.333)}}@media (-webkit-min-device-pixel-ratio:3.5),(min-device-aspect-ratio:3.5){.border-1px::after{transform:scaleY(.2857)}}@media screen and (prefers-color-scheme:dark) and (min-width:600px) and (max-width:1200px),(max-width:600px) and (prefers-color-scheme:dark){*{background-color:black;border-color:#323234 !important;color:white}header{background-color:black}header .head .menu-btn span{color:white}header .head .right{overflow:hidden}header .head .right .item a{color:#8D8D92}header .menu-list{background-color:black}header .menu-list .types .item .search-input,header .menu-list .types .item a{color:white !important}header .menu-list .types .item.active a{background-color:#323234 !important}.content-box{background-color:black}.content-box .content{background-color:black}.content-box .content .data{background-color:black}.content-box .content .data .tip{color:#8D8D92;background-color:black}.content-box .content .data table tbody tr td::after{border-bottom-color:#323234}.content-box .content .data table tbody tr .title p a{color:white}.content-box .content .data table tbody tr .tag p,.content-box .content .data table tbody tr .order{color:#8D8D92 !important}.content-box .content .data .pagination .next,.content-box .content .data .pagination .prev{background-color:#1C1C1D;color:white}.content-box .content .data .pagination .next:link,.content-box .content .data .pagination .prev:link,.content-box .content .data .pagination .next:hover,.content-box .content .data .pagination .prev:hover{background-color:#262626}.content-box .menu-list .types .item a{color:white}.content-box .menu-list .types .item.active a,.content-box .menu-list .types .item:hover a{background-color:#323234 !important}footer{background-color:black}footer .bottom .friend li,footer .bottom .friend li a{color:#8D8D92 !important}}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font: 12px/1.3 Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+ul {
+  list-style: none;
+}
+.s-button {
+  width: 100px;
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #f85d00;
+  font-size: 16px;
+  line-height: 100%;
+}
+.s-button:hover {
+  background-color: #cc560e;
+}
+a {
+  color: black;
+  outline: none;
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-track {
+  border-radius: 999px;
+  border: 0 solid transparent;
+}
+::-webkit-scrollbar-track {
+  box-shadow: 1px 1px 5px rgba(100, 100, 100, 0.2) inset;
+}
+::-webkit-scrollbar-thumb {
+  min-height: 0;
+  background-clip: content-box;
+  box-shadow: 0 0 0 5px rgba(100, 100, 100, 0.5) inset;
+}
+::-webkit-scrollbar-corner {
+  background: 0 0;
+}
+header {
+  height: 40px;
+  background-color: #fff;
+  border-bottom: solid 0.5px #dedede;
+}
+header .menu-list {
+  display: none;
+}
+header .head {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+header .head .right {
+  float: right;
+  height: 100%;
+  line-height: 40px;
+  font-size: 14px;
+  color: #333;
+}
+header .head .right .item {
+  float: left;
+  padding: 0 5px;
+}
+header .head .right a:hover {
+  color: #eb7350;
+}
+header .head .menu-btn {
+  line-height: 40px;
+  float: right;
+  height: 100%;
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+header .head .menu-btn span {
+  border: 0.5px #dedede solid;
+  padding: 3px 5px;
+  border-radius: 2px;
+}
+header .head .logo {
+  height: 100%;
+  float: left;
+  width: 108px;
+}
+header .head .logo a {
+  height: 100%;
+  display: block;
+  background: url("https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/soluow-logo.png") left center no-repeat;
+  background-size: 108px 36px;
+}
+.content-box {
+  background-color: #f7f7f7;
+  padding-top: 30px;
+}
+.content-box .search {
+  width: 1200px;
+  margin: 0 auto 30px auto;
+  height: 36px;
+  line-height: 36px;
+}
+.content-box .search > * {
+  float: left;
+  height: 100%;
+}
+.content-box .search p {
+  font-weight: bold;
+  margin-left: 30px;
+  font-size: 16px;
+}
+.content-box .search input {
+  width: 827.5862069px;
+  margin: 0 30px;
+  font-size: 14px;
+  outline: none;
+  border-radius: 0;
+  padding-left: 10px;
+  border-width: 0.5px;
+}
+.content-box .search input.error {
+  border-color: red;
+}
+.content-box .content {
+  width: 1200px;
+  border: 1px solid #dedede;
+  border-bottom: none;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #f2f2f5;
+}
+.content-box .content .menu-list {
+  padding: 20px 0;
+  float: left;
+  font-size: 12px;
+  width: 180px;
+}
+.content-box .content .menu-list .types .item a {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 30px;
+}
+.content-box .content .menu-list .types .item.active,
+.content-box .content .menu-list .types .item:hover {
+  background-color: #fff;
+  font-weight: bold;
+}
+.content-box .content .data {
+  float: left;
+  min-height: 100vh;
+  background-color: #fff;
+  border-bottom: 0.5px solid #dedede;
+  padding: 20px 20px 0 20px;
+  width: calc(100% -  180px);
+}
+.content-box .content .data:nth-last-of-type(1) {
+  border-bottom: none;
+}
+.content-box .content .data:not(:nth-of-type(1)) {
+  display: none;
+}
+.content-box .content .data .tip {
+  display: none;
+}
+.content-box .content .data table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+.content-box .content .data table tr {
+  height: 38px;
+  line-height: 38px;
+}
+.content-box .content .data table tr th {
+  color: #999 !important;
+  border-bottom: solid 0.5px #f2f2f5;
+  font-size: 12px;
+}
+.content-box .content .data table tr th.title {
+  text-align: left;
+}
+.content-box .content .data table tr td {
+  border-bottom: 1px #f2f2f5 solid;
+  font-size: 13px;
+}
+.content-box .content .data table tr .order {
+  text-align: center;
+  color: #999;
+  width: 40px;
+}
+.content-box .content .data table tr .order.fb {
+  color: #f85d00;
+}
+.content-box .content .data table tr .title p {
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 100%;
+}
+.content-box .content .data table tr .title p a {
+  color: #0078b6;
+}
+.content-box .content .data table tr .title.fb p a {
+  font-weight: bold;
+}
+.content-box .content .data table tr .empty {
+  text-align: center;
+  color: #999;
+  border: none;
+}
+.content-box .content .data table tr .tag {
+  width: 120px;
+  color: #999;
+}
+.content-box .content .data table tr .tag p {
+  width: 55px;
+  text-align: center;
+}
+.content-box .content .data table tr .tag p span {
+  font-size: 12px;
+  color: #fff;
+  background-color: #ff3852;
+  border-radius: 2px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 17px;
+  text-align: center;
+}
+.content-box .content .data table tbody tr:hover:not(.not-hover) {
+  background-color: #f2f2f5;
+}
+.content-box .content .data .pagination {
+  text-align: center;
+  margin: 10px 0;
+}
+.content-box .content .data .pagination .prev,
+.content-box .content .data .pagination .next {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 0.5px solid #dedede;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.content-box .content .data .pagination .prev:hover,
+.content-box .content .data .pagination .next:hover {
+  background: #fbfbfb;
+}
+.content-box .content .data .pagination .prev.disabled,
+.content-box .content .data .pagination .next.disabled {
+  background-color: #f2f2f2;
+  cursor: no-drop;
+}
+.content-box .content.error {
+  height: 77vh;
+  text-align: center;
+  padding-top: 60px;
+}
+.content-box .content.error h1 {
+  font-size: 70px;
+  color: #ccc;
+  user-select: none;
+}
+.content-box .content.error h2 {
+  color: #666;
+  margin-top: 20px;
+}
+.content-box .content.error p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.content-box .content.error p a {
+  text-decoration: underline;
+}
+.content-box .content.error .err {
+  display: none;
+}
+footer {
+  border-top: 0.5px #dedede solid;
+  background-color: #fff;
+  font-size: 12px;
+}
+footer .bottom {
+  width: 1200px;
+  margin: 0 auto;
+}
+footer .bottom .friend {
+  border-bottom: 0.5px #dedede solid;
+  padding: 10px 0;
+  overflow: hidden;
+}
+footer .bottom .friend li {
+  float: left;
+  padding-right: 10px;
+}
+footer .bottom .friend li a {
+  color: #666;
+}
+footer .bottom .copyright {
+  padding: 10px 0;
+  color: #666;
+}
+footer .bottom .soluow-logo {
+  display: none;
+}
+/* ipad */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  header .head {
+    width: 90%;
+  }
+  .content-box .search {
+    width: 90%;
+  }
+  .content-box .search input {
+    width: calc(90%  - 64px - 100px - 60px);
+  }
+  .content-box .content {
+    width: 90%;
+  }
+  .content-box .content .menu-list {
+    width: 140px;
+  }
+  .content-box .content .data {
+    width: calc(100% - 140px);
+  }
+  .content-box .content .data table tr .tag {
+    width: 55px;
+  }
+  footer .bottom {
+    width: 90%;
+  }
+}
+/*手机*/
+@media screen and (max-width: 600px) {
+  a {
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  header .head {
+    width: 100%;
+    padding: 0 10px;
+  }
+  header .head .menu-btn {
+    display: block;
+  }
+  header .head .right {
+    display: none;
+  }
+  header .menu-list {
+    border-bottom: 0.5px solid #dedede;
+    position: absolute;
+    z-index: 2;
+    top: 40px;
+    width: 100%;
+    text-align: center;
+    padding-top: 0;
+    background: #f2f2f5;
+  }
+  header .menu-list .types .item {
+    height: 35px;
+    line-height: 37px;
+    font-size: 12px;
+  }
+  header .menu-list .types .item .search-input {
+    width: 70%;
+    margin-left: 10px;
+    height: 30px;
+    outline: none;
+    border-radius: 0;
+    padding-left: 10px;
+    line-height: 30px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-color: #dedede;
+    margin-bottom: 5px;
+    border-width: 0.5px;
+  }
+  header .menu-list .types .item a {
+    padding-left: 0;
+    display: block;
+  }
+  header .menu-list .types .item.active:not(:nth-last-of-type(1)),
+  header .menu-list .types .item:hover:not(:nth-last-of-type(1)) {
+    background-color: #fff;
+    font-weight: bold;
+  }
+  header .menu-list .types .item.last {
+    margin-bottom: 5px;
+  }
+  .content-box {
+    padding-top: 0;
+  }
+  .content-box .search {
+    display: none;
+  }
+  .content-box .content {
+    width: 100%;
+    border: none;
+    background-color: #f7f7f7;
+  }
+  .content-box .content .menu-list {
+    display: none;
+  }
+  .content-box .content .data {
+    width: 100%;
+    display: block !important;
+    padding: 0;
+    min-height: 0;
+  }
+  .content-box .content .data .tip {
+    background-color: #f7f7f7;
+    border-bottom: 0.5px solid #dedede;
+    display: block;
+    font-size: 14px;
+    color: #999;
+    line-height: 35px;
+    padding: 0 10px;
+    overflow: hidden;
+  }
+  .content-box .content .data .tip span,
+  .content-box .content .data .tip a {
+    color: #ff3852;
+  }
+  .content-box .content .data table thead {
+    display: none;
+  }
+  .content-box .content .data table tbody tr td {
+    border-bottom: none;
+    position: relative;
+  }
+  .content-box .content .data table tbody tr td:after {
+    content: '';
+    position: absolute;
+    width: 200%;
+    bottom: 0;
+    left: 0;
+    transform-origin: 0 0;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    z-index: 1;
+    border-bottom: 1px solid #f2f2f5;
+  }
+  .content-box .content .data table tbody tr .tag {
+    width: 55px;
+    text-align: center;
+  }
+  .content-box .content .data table tbody tr .order {
+    font-style: italic;
+  }
+  .content-box .content .data table tbody tr .title p a {
+    line-height: 47px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+    font-size: 14px;
+  }
+  .content-box .content .data table tbody tr:hover {
+    background-color: white !important;
+  }
+  footer .bottom {
+    width: 100%;
+  }
+  footer .bottom .friend {
+    padding-left: 10px;
+  }
+  footer .bottom .copyright {
+    display: none;
+  }
+  footer .bottom .soluow-logo {
+    display: block;
+    text-align: center;
+  }
+  footer .bottom .soluow-logo a {
+    height: 220px;
+    display: block;
+    background: url("https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/soluow-logo.png") top 30px center no-repeat;
+    background-size: 170px 56.666px;
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-device-aspect-ratio: 1.5) {
+  .border-1px::after {
+    transform: scaleY(0.7);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-device-aspect-ratio: 2) {
+  .border-1px::after {
+    transform: scaleY(0.5);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 2.5), (min-device-aspect-ratio: 2.5) {
+  .border-1px::after {
+    transform: scaleY(0.4);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3), (min-device-aspect-ratio: 3) {
+  .border-1px::after {
+    transform: scaleY(0.333);
+  }
+}
+@media (-webkit-min-device-pixel-ratio: 3.5), (min-device-aspect-ratio: 3.5) {
+  .border-1px::after {
+    transform: scaleY(0.2857);
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (min-width: 600px) and (max-width: 1200px), (max-width: 600px) and (prefers-color-scheme: dark) {
+  * {
+    background-color: black;
+    border-color: #323234 !important;
+    color: white;
+  }
+  header {
+    background-color: black;
+  }
+  header .head .menu-btn span {
+    color: white;
+  }
+  header .head .right {
+    overflow: hidden;
+  }
+  header .head .right .item a {
+    color: #8D8D92;
+  }
+  header .menu-list {
+    background-color: black;
+  }
+  header .menu-list .types .item .search-input,
+  header .menu-list .types .item a {
+    color: white !important;
+  }
+  header .menu-list .types .item.active a {
+    background-color: #323234 !important;
+  }
+  .content-box {
+    background-color: black;
+  }
+  .content-box .content {
+    background-color: black;
+  }
+  .content-box .content .data {
+    background-color: black;
+  }
+  .content-box .content .data .tip {
+    color: #8D8D92;
+    background-color: black;
+  }
+  .content-box .content .data table tbody tr td::after {
+    border-bottom-color: #323234;
+  }
+  .content-box .content .data table tbody tr .title p a {
+    color: white;
+  }
+  .content-box .content .data table tbody tr .tag p,
+  .content-box .content .data table tbody tr .order {
+    color: #8D8D92 !important;
+  }
+  .content-box .content .data .pagination .next,
+  .content-box .content .data .pagination .prev {
+    background-color: #1C1C1D;
+    color: white;
+  }
+  .content-box .content .data .pagination .next:link,
+  .content-box .content .data .pagination .prev:link,
+  .content-box .content .data .pagination .next:hover,
+  .content-box .content .data .pagination .prev:hover {
+    background-color: #262626;
+  }
+  .content-box .menu-list .types .item a {
+    color: white;
+  }
+  .content-box .menu-list .types .item.active a,
+  .content-box .menu-list .types .item:hover a {
+    background-color: #323234 !important;
+  }
+  footer {
+    background-color: black;
+  }
+  footer .bottom .friend li,
+  footer .bottom .friend li a {
+    color: #8D8D92 !important;
+  }
+}
