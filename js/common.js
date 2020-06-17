@@ -1,39 +1,25 @@
 $(function () {
     var imgLoadError = "https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load-error.svg";
     var imgLoad = "https://cdn.jsdelivr.net/gh/YQHP-Happi/soluow-resouces-repos-cdn@master/images/img-load.svg";
-    var startX = 0;
-    var startY = 0;
-    var $menuList = $("header .menu-list,header nav");
     var $searchText = $("#searchText");
     var $search = $("#search");
-    var $phoneSearchText = $("#phoneSearchText");
+    var $searchBox = $("header .search-box");
+    var $phoneSearchText = $searchBox.find('input');
+    var $searchCancel = $searchBox.find('.cancel');
 
-    $("header .menu-btn").on("click", function (e) {
+    var $searchIcon = $("header .menu-btn");
+
+    $searchIcon.on("click", function (e) {
         e.stopPropagation();
-        $menuList.slideToggle('fast');
+        $searchBox.toggle();
+        $(this).toggle();
+        $phoneSearchText.focus();
     });
 
-    $(window).on("resize", function () {
-        $menuList.hide();
-    }).on("click", function () {
-        $menuList.hide();
-    }).on('touchstart', function (e) {
-        startX = e.originalEvent.changedTouches[0].pageX;
-        startY = e.originalEvent.changedTouches[0].pageY;
-    }).on('touchmove', function (e) {
-        var endX = e.originalEvent.changedTouches[0].pageX;
-        var endY = e.originalEvent.changedTouches[0].pageY;
-        var direction = getSlideDirection(startX, startY, endX, endY);
-        if (direction === 1) {
-            $menuList.hide();
-        }
+    $searchCancel.on('click', function () {
+        $searchIcon.click();
     });
 
-    $menuList.on("click", function (e) {
-        e.stopPropagation();
-    }).on("touchmove", function (e) {
-        e.stopPropagation();
-    });
 
     $search.on('click', function () {
         var text = $searchText.val().trim();
@@ -61,22 +47,6 @@ $(function () {
         (text && text.trim().length !== 0) && (location.href = '/search/' + text);
     }
 
-    function getSlideDirection(startX, startY, endX, endY) {
-        var dy = startY - endY;
-        var result = 0;
-        if (dy > 0) {
-            //向上滑动
-            result = 1;
-        } else if (dy < 0) {
-            //向下滑动
-            result = 2;
-        } else {
-            result = 0;
-        }
-        return result;
-    }
-
-
     /**
      * 懒加载图片
      */
@@ -94,7 +64,9 @@ $(function () {
 
         img.onerror = function () {
             if (retryCount < 3) {
-                lazyLoadImg($img);
+                setTimeout(function () {
+                    lazyLoadImg($img);
+                }, 300);
             } else {
                 $img.attr('src', imgLoadError);
                 console.log('图片加载失败:' + $img.data('src'))
